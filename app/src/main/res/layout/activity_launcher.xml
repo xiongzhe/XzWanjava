@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp0"
+        android:layout_weight="1">
+
+        <ImageView
+            android:id="@+id/iv_launcher_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/tv_launcher_timer"
+            android:layout_width="@dimen/dp60"
+            android:layout_height="@dimen/dp60"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/dp25"
+            android:layout_marginEnd="@dimen/dp15"
+            android:layout_marginRight="@dimen/dp15"
+            android:background="@drawable/bg_circle_timer"
+            android:gravity="center"
+            android:paddingLeft="@dimen/dp15"
+            android:paddingTop="@dimen/dp5"
+            android:paddingRight="@dimen/dp15"
+            android:paddingBottom="@dimen/dp5"
+            android:text="跳过\n5s"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/sp12"
+            android:visibility="gone" />
+    </RelativeLayout>
+</LinearLayout>

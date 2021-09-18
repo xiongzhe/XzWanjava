@@ -1,0 +1,41 @@
+<resources>
+    <string name="app_name">wanjava</string>
+    <string name="copyright">华润江中信息管理部研制</string>
+    <string name="bar_code_declare1">1 点击页面【点击扫码】</string>
+    <string name="bar_code_declare2">2 扫码产品包装盒上的产品追溯码(条形码)</string>
+    <string name="bar_code_declare3">3 扫码成功后即可查看产品追溯的信息</string>
+    <string name="root_warn">您的手机已root,存在安全风险,暂不提供服务！</string>
+    <string name="visit_warn">该客户归属人不是您,本次拜访不计入拜访考核,是否继续？</string>
+
+    <!--【精益求精-江中OTC销售线组织文化】-->
+    <string name="otc_culture1_1">执行到位</string>
+    <string name="otc_culture1_2">全力以赴把事做好</string>
+    <string name="otc_culture1_3">上下同欲、精力聚焦</string>
+    <string name="otc_culture1_4">行动节奏一致</string>
+    <string name="otc_culture2_1">不忘初心</string>
+    <string name="otc_culture2_2">以公司利益最大化</string>
+    <string name="otc_culture2_3">及时复盘总结</string>
+    <string name="otc_culture2_4">对目标对市场敬畏</string>
+    <string name="otc_culture2_5">有紧迫感、危机感</string>
+    <string name="otc_culture3_1">为实现目标创造条件</string>
+    <string name="otc_culture3_2">有创新思维</string>
+    <string name="otc_culture3_3">不畏困难</string>
+    <string name="otc_culture3_4">敢于挑战</string>
+    <string name="otc_culture3_5">勇于突破</string>
+    <string name="otc_culture4_1">不断超越目标</string>
+    <string name="otc_culture4_2">践行匠心精神</string>
+    <string name="otc_culture4_3">让优秀成为习惯</string>
+
+    <!-- 隐私政策温馨提示 -->
+    <string name="privacy1">感谢您信任并使用营销e网通!</string>
+    <string name="privacy2">我们依据最新的法律要求发布或更新了用户协议和隐私政策，特向您推送本提示。</string>
+    <string name="privacy3">请您仔细阅读并充分理解相关条款，方便您了解自己的权利。该条款主要包含如下内容：</string>
+    <string name="privacy4">1、您在使用我们的产品或服务时，将会提供与具体功能相关的个人信息(可能涉及账号、位置等信息)。</string>
+    <string name="privacy5">2、未经您的同意，我们不会将上述信息用于您未授权的其他用途或目的。</string>
+    <string name="privacy6">[请注意]您点击同意即表示您已阅读并同意我们的《用户协议》和《隐私政策》</string>
+    <string name="privacy7">登录代表您已同意《用户协议》、《隐私政策》</string>
+
+
+    <!-- 薪资提示 -->
+    <string name="salary_tip">为保证薪酬数据安全,请进行二次身份验证</string>
+</resources>

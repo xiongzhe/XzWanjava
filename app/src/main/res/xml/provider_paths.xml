@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+    <external-path
+        name="beta_external_path"
+        path="Download/" />
+    <external-path
+        name="beta_external_files_path"
+        path="Android/data/" />
+    <external-path
+        name="beta_external_downs_path"
+        path="BangBangOfflineFiles/" />
+    <external-path
+        name="photo_path"
+        path="DCIM/camera/" />
+    <external-path
+        name="wan"
+        path="wan" />
+</paths>
