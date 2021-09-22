@@ -67,25 +67,28 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.xiongz.wanjava.ui.login.LoginActivity"
+            android:name=".ui.login.LoginActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.xiongz.wanjava.main.MainActivity"
+            android:name=".main.MainActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.xiongz.wanjava.ui.me.SettingActivity"
+            android:name=".ui.me.SettingActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.xiongz.wanjava.ui.me.SelectNetActivity"
+            android:name=".ui.me.SelectNetActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.xiongz.wanjava.common.activity.NetErrorActivity"
+            android:name=".common.activity.NetErrorActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.xiongz.wanjava.common.web.CommonWebActivity"
+            android:name=".common.web.CommonWebActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.me.WanWebActivity"
             android:screenOrientation="portrait" />
 
         <!--bugly配置-->

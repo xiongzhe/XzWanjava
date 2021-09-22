@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        app:contentInsetLeft="@dimen/dp0"
+        app:contentInsetStart="@dimen/dp0"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:theme="@style/ToolbarTheme"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp48"
+        android:background="@color/colorPrimary"
+        android:minHeight="@dimen/dp48">
+
+        <TextView
+            android:id="@+id/tv_toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:lines="1"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp18" />
+    </android.support.v7.widget.Toolbar>
+
+    <com.xiongz.android.core.ui.webview.X5ProgressWebView
+        android:id="@+id/x5_web_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

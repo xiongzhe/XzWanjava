@@ -28,6 +28,7 @@ import com.xiongz.wanjava.common.net.ConstUrl;
 import com.xiongz.wanjava.common.net.NetManager;
 import com.xiongz.wanjava.common.net.ObserverProxy;
 import com.xiongz.wanjava.common.net.WanNetEntity;
+import com.xiongz.wanjava.common.web.CommonWebActivity;
 import com.xiongz.wanjava.db.ProfileManager;
 import com.xiongz.wanjava.db.UserProfile;
 import com.xiongz.wanjava.ui.login.LoginActivity;
@@ -134,7 +135,10 @@ public class MeFragment extends JzFragment implements SwipeRefreshLayout.OnRefre
                 break;
             // 开源网站
             case R.id.layout_web:
-                ToastUtils.showLong("开源网站");
+                Bundle bundle = new Bundle();
+                bundle.putString(WanWebActivity.WEB_TITLE, "玩Android网站");
+                bundle.putString(WanWebActivity.WEB_URL, "https://www.wanandroid.com/");
+                ActivityUtils.startActivity(bundle, WanWebActivity.class);
                 break;
             // 加入我们
             case R.id.layout_join:

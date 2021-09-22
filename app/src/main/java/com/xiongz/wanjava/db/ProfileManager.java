@@ -1,8 +1,6 @@
 package com.xiongz.wanjava.db;
 
 import com.xiongz.android.core.util.string.Base64Util;
-import com.xiongz.wanjava.common.constant.Const;
-import com.xiongz.wanjava.common.utils.ADESUtil;
 
 import java.util.List;
 
