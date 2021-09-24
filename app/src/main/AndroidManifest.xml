@@ -90,6 +90,12 @@
         <activity
             android:name=".ui.me.WanWebActivity"
             android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.me.DemoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.me.IntegralActivity"
+            android:screenOrientation="portrait" />
 
         <!--bugly配置-->
         <activity

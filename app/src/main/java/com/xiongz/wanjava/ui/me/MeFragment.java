@@ -2,6 +2,8 @@ package com.xiongz.wanjava.ui.me;
 
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -32,6 +34,7 @@ import com.xiongz.wanjava.common.web.CommonWebActivity;
 import com.xiongz.wanjava.db.ProfileManager;
 import com.xiongz.wanjava.db.UserProfile;
 import com.xiongz.wanjava.ui.login.LoginActivity;
+import com.xiongz.wanjava.ui.me.entity.IntegralEntity;
 
 import org.greenrobot.eventbus.Subscribe;
 import org.greenrobot.eventbus.ThreadMode;
@@ -69,6 +72,8 @@ public class MeFragment extends JzFragment implements SwipeRefreshLayout.OnRefre
     private RefreshHandler mRefreshHandler;
     // 登录用户信息
     private UserProfile mUserProfile;
+    // 我的积分
+    private IntegralEntity mRank;
 
     @Override
     public Object setLayout() {
@@ -119,7 +124,9 @@ public class MeFragment extends JzFragment implements SwipeRefreshLayout.OnRefre
                 break;
             // 我的积分
             case R.id.layout_integral:
-                ToastUtils.showLong("我的积分");
+                Bundle integralBundle = new Bundle();
+                integralBundle.putParcelable(IntegralActivity.INTEGRAL_RANK, mRank);
+                ActivityUtils.startActivity(integralBundle, IntegralActivity.class);
                 break;
             // 我的收藏
             case R.id.layout_collect:
@@ -142,11 +149,19 @@ public class MeFragment extends JzFragment implements SwipeRefreshLayout.OnRefre
                 break;
             // 加入我们
             case R.id.layout_join:
-                ToastUtils.showLong("加入我们");
+                Intent intent = new Intent();
+                intent.setData(Uri.parse("mqqopensdkapi://bizAgent/qm/qr?url=http%3A%2F%2Fqm.qq.com%2Fcgi-bin%2Fqm%2Fqr%3Ffrom%3Dapp%26p%3Dandroid%26k%3D9n4i5sHt4189d4DvbotKiCHy-5jZtD4D"));
+                // 此Flag可根据具体产品需要自定义，如设置，则在加群界面按返回，返回手Q主界面，不设置，按返回会返回到呼起产品界面    //intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+                try {
+                    ActivityUtils.startActivity(intent);
+                } catch (Exception e) {
+                    // 未安装手Q或安装的版本不支持
+                    ToastUtils.showShort("未安装手机QQ或安装的版本不支持");
+                }
                 break;
             // 一些示例
             case R.id.layout_demo:
-                ToastUtils.showLong("一些示例");
+                ActivityUtils.startActivity(DemoActivity.class);
                 break;
             // 系统设置
             case R.id.layout_setting:
@@ -194,7 +209,7 @@ public class MeFragment extends JzFragment implements SwipeRefreshLayout.OnRefre
     }
 
     /**
-     * 登录
+     * 我的积分
      */
     public void requestIntegral() {
         String url = NetManager.getInstance().getUrl(ConstUrl.INTEGRAL);
@@ -239,7 +254,9 @@ public class MeFragment extends JzFragment implements SwipeRefreshLayout.OnRefre
     private void parseData(String result) {
         WanNetEntity netEntity = FastjsonUtil.parseObject(result, WanNetEntity.class);
         JSONObject data = (JSONObject) netEntity.getData();
-        tvInfo.setText("id：" + data.getInteger("userId") + "　排名：" + data.getString("rank"));
-        tvIntegral.setText(String.valueOf(data.getInteger("coinCount")));
+        String list = FastjsonUtil.toJSONString(data);
+        mRank = FastjsonUtil.parseObject(list, IntegralEntity.class);
+        tvInfo.setText("id：" + mRank.getUserId() + "　排名：" + mRank.getRank());
+        tvIntegral.setText(String.valueOf(mRank.getCoinCount()));
     }
 }

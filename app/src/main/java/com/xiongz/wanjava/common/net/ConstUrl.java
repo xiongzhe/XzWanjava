@@ -42,7 +42,8 @@ public class ConstUrl {
     public static final String APP_LOGIN = "/user/login";
     // 获取当前账户的个人积分
     public static final String INTEGRAL = "/lg/coin/userinfo/json";
-
+    // 获取积分排行榜
+    public static final String INTEGRAL_RANK = "/coin/rank/{page}/json";
 
 
     /********** 部分web/图片url ************/
