@@ -96,6 +96,9 @@
         <activity
             android:name=".ui.me.IntegralActivity"
             android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.me.IntegralHisActivity"
+            android:screenOrientation="portrait" />
 
         <!--bugly配置-->
         <activity

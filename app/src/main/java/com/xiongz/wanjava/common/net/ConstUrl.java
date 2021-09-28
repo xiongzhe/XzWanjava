@@ -44,6 +44,8 @@ public class ConstUrl {
     public static final String INTEGRAL = "/lg/coin/userinfo/json";
     // 获取积分排行榜
     public static final String INTEGRAL_RANK = "/coin/rank/{page}/json";
+    // 获取积分历史
+    public static final String INTEGRAL_HISTORY = "/lg/coin/list/{page}/json";
 
 
     /********** 部分web/图片url ************/
