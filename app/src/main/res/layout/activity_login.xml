@@ -144,6 +144,7 @@
             android:textColor="@color/colorPrimary"
             android:text="去注册"
             android:textStyle="bold"
+            android:visibility="gone"
             android:textSize="@dimen/sp14" />
 
         <TextView

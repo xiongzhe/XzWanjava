@@ -32,6 +32,7 @@
         android:layout_margin="@dimen/dp30"
         android:src="@drawable/ic_add"
         app:borderWidth="@dimen/dp0"
+        android:visibility="gone"
         app:fabSize="auto"
         app:layout_behavior=".common.views.ScrollAwareFABBehavior"
         app:layout_constraintBottom_toBottomOf="parent"

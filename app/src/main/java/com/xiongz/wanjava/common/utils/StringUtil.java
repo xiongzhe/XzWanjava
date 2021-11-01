@@ -59,7 +59,8 @@ public class StringUtil {
             public void onClick(View widget) {
                 Bundle bundle = new Bundle();
                 bundle.putString(CommonWebActivity.WEB_TITLE, "用户协议");
-                bundle.putString(CommonWebActivity.WEB_URL, ConstUrl.PROTOCOL);
+                // bundle.putString(CommonWebActivity.WEB_URL, ConstUrl.PROTOCOL);
+                bundle.putString(CommonWebActivity.WEB_URL, "https://www.baidu.com");
                 ActivityUtils.startActivity(bundle, CommonWebActivity.class);
             }
         }, index1 - 1, index1 + 5, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
@@ -71,7 +72,8 @@ public class StringUtil {
             public void onClick(View widget) {
                 Bundle bundle = new Bundle();
                 bundle.putString(CommonWebActivity.WEB_TITLE, "隐私政策");
-                bundle.putString(CommonWebActivity.WEB_URL, ConstUrl.PRIVACY);
+                // bundle.putString(CommonWebActivity.WEB_URL, ConstUrl.PRIVACY);
+                bundle.putString(CommonWebActivity.WEB_URL, "https://www.baidu.com");
                 ActivityUtils.startActivity(bundle, CommonWebActivity.class);
             }
         }, index2 - 1, index2 + 5, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
